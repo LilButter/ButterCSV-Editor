@@ -197,7 +197,7 @@ class CSVTranslationTool:
                 foreground=self.theme['colors'].get('entry_fg')
             ).pack(expand=True, fill=tk.BOTH, padx=185, pady=(10, 0))
 
-            # Disable scrolling and reset scrollregion
+            # Disable scrolling
             self.canvas.unbind_all("<MouseWheel>")
             self.canvas.config(scrollregion=(0, 0, 0, 0))
             return
@@ -312,7 +312,6 @@ class CSVTranslationTool:
             index = self.list_widget.index("insert")
             current_line = int(index.split('.')[0])
 
-            # Find which label tag we are inside
             target_idx = None
             label_line_indices = []
             for tag in self.protected_label_lines:
@@ -677,8 +676,8 @@ class CSVTranslationTool:
 
     def bind_clipboard_shortcuts(self, widget):
         def on_paste(event):
-            # Prevent double-paste by blocking the second event
-            if event.state & 0x0004:  # Control key
+            # Prevent double-paste
+            if event.state & 0x0004:
                 return "break"
 
         widget.bind("<Control-c>", lambda e: widget.event_generate("<<Copy>>"), add=True)
@@ -693,7 +692,6 @@ class CSVTranslationTool:
         menu.add_command(label="Cut", command=lambda: widget.event_generate("<<Cut>>"))
         widget.bind("<Button-3>", lambda e: menu.tk_popup(e.x_root, e.y_root))
 
-        # Also bind keyboard shortcuts
         self.bind_clipboard_shortcuts(widget)
 
 if __name__ == "__main__":
