@@ -1,55 +1,97 @@
-# ButterCSV-Editor
-A GUI CSV Editor for translations and formatting, mainly for MHF-Z item descriptions or other descriptions/mhfdat.bin info.
+# 🧈 ButterCSV-Editor
 
-HOW-TO-USE:
-    Simply just run the script with `python ButterCSV.py` and the gui will launch and generate the theme.ini in the same directory as the script location.
-    (On Windows, you can click on the folder URL then type `cmd` to launch a cmd at that location.) [Haven't tested on linux]
+A GUI CSV Editor for translations and formatting — mainly for **MHF-Z** item descriptions or other `mhfdat.bin` content.
 
-Current Features:
-    *Launch info
-    *Duplicate line merging/rebuilding.
-    *Duplicate amount filtering.
-    *List mode for mass editing/copying.
-    *Right click context menu for List/Main Mode
-    *Settings page for character amount, max lines, and amount of entries per page.
-    *CSV Line fixing for `"` locations
-    *Dummy line / Development line skipping
-    *Save caching, generates autosavecache.csv (same directory as the script)
-    *Save location on rebuild (get to choose)
-    *Custom styling, generates theme.ini (same directory as the script)
-    *Warnings in console when rebuilding for line limit/character limit
-    *Warnings on entry line ID's when editing if you pass either line or character amount.
-    *Warnings for broken color code tags (‾C01+) (‾C00)   <--- Color codes are any number higher than the ‾C00 but must have the ending ‾C00
-TODO:
-    *Cache loading/option load cache file.
-    *Different base theme options for default.
-    *Theme.ini comments or maybe add to settings page
-    
+---
 
+## 🚀 How to Use
 
+1. Run the script with:
 
+    ```bash
+    python ButterCSV.py
+    ```
 
-This is a preview of what the warnings and main mode looks like after loading a csv file.
-![App Screenshot](images/MainMode.png "Main window after loading a csv also has warning labels.")
+2. The GUI will launch and auto-generate a `theme.ini` file in the same directory as the script.
 
-This is the same thing as above just in List-Mode.
-![App Screenshot](images/ListMode.png "List mode for mass editing, also has wanring labels.")
+💡 **Tip for Windows Users:**  
+Navigate to the script’s folder, click the address bar, type `cmd`, and press Enter to open a command prompt in that location.
 
-Settings Page for adjusting the character amount, max lines and entries per page.
-![App Screenshot](images/Settings.png "Settings page")
+❗ *Linux not yet tested.*
 
-Page seeking just put in a number and press `enter` to jump to that page.
-![App Screenshot](images/PageJump.png "Jumping to a page number")
+---
 
-Any duplicate entry will be merged into one line for mass replacing the (number) next to the entry is the duplicates amount.
-![App Screenshot](images/DupeMerge.png "Duplicate merging")
+## ✅ Current Features
 
-You can also sort the entries by either max duplicate amount or asc and desc.
-![App Screenshot](images/SortOptions.png "Duplicate sorting")
+- Launch info
+- **Duplicate line** merging and rebuilding
+- **Duplicate count** filtering
+- **List Mode** for mass editing/copying
+- Right-click **context menus** in List/Main Mode
+- **Settings Page** for:
+  - Character limit
+  - Max lines per entry
+  - Entries per page
+- **CSV line fixing** (for broken quotes: `"` issues)
+- **Dummy line skipping** (dummy & dev-only lines are ignored)
+- **Save Caching**:
+  - Auto-generates `_autosave_translation_cache.csv` <-- Same dir as script
+- **Custom Styling**:
+  - Generates `theme.ini` <-- Same dir as script
+- **Warnings**:
+  - Console warnings for line/char limits during rebuild
+  - Entry line warnings if you exceed limits while editing
+  - Color code validation for tags like `‾C01+`, `‾C00`
 
-As for rebuilding the csv after making changes, any line that was previous broken `"` in lines will be fixed in the output.
-Left side is the original csv and the right is the rebuild.
-![App Screenshot](images/LineFixes.png "quotation fixing")
+> ⚠️ Color codes must **start with `‾CXX` and end with `‾C00`** <-- DOES NOT COUNT TOWARD CHARACTER LIMIT
 
-Here is an example of a rebuilt file with changes (same line as duplicate photo).
-![App Screenshot](images/RebuildExample.png "Rebuild preview")
+---
+
+## 🔧 TODO
+
+- Cache loading (option to load a cache file)
+- Additional default theme options
+- Better theme customization UI (maybe add to settings)
+
+---
+
+## 🖼️ Screenshots
+
+### Main Mode (after loading a CSV with warnings)
+![MainMode](images/MainMode.png "Main window after loading a csv with warnings")
+
+---
+
+### List Mode (mass editing, also shows warnings)
+![ListMode](images/ListMode.png "List mode for mass editing, with warnings")
+
+---
+
+### Settings Page (character count, line limits, entry amount per page)
+![Settings](images/Settings.png "Settings page")
+
+---
+
+### Page Jumping (enter number + press `Enter`)
+![PageJump](images/PageJump.png "Jump to page")
+
+---
+
+### Duplicate Entry Merging (number = count of duplicates)
+![DupeMerge](images/DupeMerge.png "Merged duplicates")
+
+---
+
+### Sorting Options (by duplicate count, asc/desc)
+![SortOptions](images/SortOptions.png "Sort options")
+
+---
+
+### Quotation Fixing (broken quotes fixed in rebuilt CSV)
+**Left:** Fixed output • **Right:** Original
+![LineFixes](images/LineFixes.png "Quotation fixing")
+
+---
+
+### Example Rebuilt File (after editing) <-- same line as in the `Duplicate Entry Merging` img
+![RebuildExample](images/RebuildExample.png "Rebuild preview")
