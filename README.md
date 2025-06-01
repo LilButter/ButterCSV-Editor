@@ -95,3 +95,9 @@ Navigate to the script’s folder, click the address bar, type `cmd`, and press 
 
 ### Example Rebuilt File (after editing) <-- same line as in the `Duplicate Entry Merging` img
 ![RebuildExample](images/RebuildExample.png "Rebuild preview")
+
+---
+
+### 📂 Use FrontierTextHandler to extract the CSV file
+
+**Source:** [Houmgaor/FrontierTextHandler on GitHub](https://github.com/Houmgaor/FrontierTextHandler)
