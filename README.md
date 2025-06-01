@@ -98,6 +98,6 @@ Navigate to the script’s folder, click the address bar, type `cmd`, and press 
 
 ---
 
-### 📂 Use FrontierTextHandler to extract the CSV file
+### 📂 Use FrontierTextHandler by `Houmgaor` to extract the CSV file
 
 **Source:** [Houmgaor/FrontierTextHandler on GitHub](https://github.com/Houmgaor/FrontierTextHandler)
