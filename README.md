@@ -55,6 +55,7 @@ Navigate to the script’s folder, click the address bar, type `cmd`, and press 
 - Special character table page for reference (example: ‾C05 = yellow, color labels and other special characters)
 - create pac mode for npc files - with same features as above (might fork this to a new git)
 - original line compare with cached file/changes - this will probably be worked on last^^^
+- Fix false warnings when rebuilding
 - sqaush any reported bug or add any feature than is reported.
 
 ---
