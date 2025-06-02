@@ -52,6 +52,10 @@ Navigate to the script’s folder, click the address bar, type `cmd`, and press 
 - Cache loading (option to load a cache file)
 - Additional default theme options
 - Better theme customization UI (maybe add to settings)
+- Special character table page for reference (example: ‾C05 = yellow, color labels and other special characters)
+- create pac mode for npc files - with same features as above (might fork this to a new git)
+- original line compare with cached file/changes - this will probably be worked on last^^^
+- sqaush any reported bug or add any feature than is reported.
 
 ---
 
