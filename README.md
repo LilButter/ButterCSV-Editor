@@ -56,6 +56,7 @@ Navigate to the script’s folder, click the address bar, type `cmd`, and press 
 - create pac mode for npc files - with same features as above (might fork this to a new git)
 - original line compare with cached file/changes - this will probably be worked on last^^^
 - Fix false warnings when rebuilding
+- replace added `"` in dialogue to `'` so rebuild doesnt result in `""` or `"""`
 - sqaush any reported bug or add any feature than is reported.
 
 ---
