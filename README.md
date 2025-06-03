@@ -58,6 +58,7 @@ Navigate to the script’s folder, click the address bar, type `cmd`, and press 
 - Fix false warnings when rebuilding
 - Replace added `"` in dialogue to `'` so rebuild doesnt result in `""` or `"""`
 - Add select all button to context menu and shortcut keys
+- Add Second Rebuild option for Houmgaor TextHandler. (currently rebuilds identical to the original)
 - Sqaush any reported bug or add any feature than is reported.
 
 ---
